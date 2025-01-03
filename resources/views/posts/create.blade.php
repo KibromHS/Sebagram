@@ -12,7 +12,7 @@
                 <div class="row form-group">
                     <label for="caption" class="col-md-4 col-form-label">Post Caption</label>
 
-                    <input id="caption" type="text" class="form-control @error('name') is-invalid @enderror" name="caption" value="{{ old('caption') }}"  autocomplete="caption" autofocus>
+                    <input id="caption" type="text" class="form-control @error('caption') is-invalid @enderror" name="caption" value="{{ old('caption') }}"  autocomplete="caption" autofocus>
 
                     @error('caption')
                         <span class="invalid-feedback" role="alert">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="row">
                     <label for="image" class="col-md-4 col-form-label">Upload Image</label>
-                    <input type="file" class="form-controll-file" id="image" name="image">
+                    <input type="file" class="form-control-file" id="image" name="image">
 
                     @error('image')
                         <span class="invalid-feedback" role="alert">
