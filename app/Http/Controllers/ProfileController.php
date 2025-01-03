@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class ProfileController extends Controller
 {
-    public function index() {
-        return view('home');
+    public function index($id) {
+        $user = User::findOrFail($id);
+        return view('profiles.index', [
+            "user" => $user
+        ]);
     }
 }

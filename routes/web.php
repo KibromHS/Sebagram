@@ -8,6 +8,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\ProfileController::class, 'index'])->name('home');
+Route::get('/profile/{user}', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.show');
 
 
+Route::get('/p/create', [App\Http\Controllers\PostsController::class, 'create'])->name('p.create');
+Route::post('/p', [App\Http\Controllers\PostsController::class, 'store'])->name('p.store');
